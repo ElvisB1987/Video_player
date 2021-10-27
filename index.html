@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
     <title>Video_Player</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="player">
-        <video class="player__video viewer" src="./clip1.mp4"></video>
+      <video class="player__video viewer" src="./clip1.mp4"></video>
 
-        <div class="player__controls">
-            <div class="progress">
-                <div class="progress__filled"></div>
-            </div>
-            <button class="player__button toggle" title="TogglePlay">►</button>
-            <div class="volume_holder">
-                <div id="volume">
-                    <i class="fas fa-volume-up"></i>
-                </div>
-                <input type="range" id="volume" name="volume" class="player__slider" min="0" max="1" step="0.05"
-                    value="1">
-            </div>
-
-            <div class="speed_holder">
-                <div class="speed">
-                    <div><i id="green" class="fas fa-fire"></i></div>
-                    <div><i id="blue" class="fas fa-fire"></i></div>
-                    <div><i id="orange" class="fas fa-fire"></i></div>
-                    <div><i id="red" class="fas fa-fire"></i></div>
-                </div>
-                <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.5" value="1">
-            </div>
-            <div class="fullScreen toggleF" title="FullScreen"><i class="fas fa-expand-alt"></i></div>
-
+      <div class="player__controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
         </div>
+        <button class="player__button toggle" title="TogglePlay">►</button>
+        <div class="volume_holder">
+          <div id="volume">
+            <i class="fas fa-volume-up"></i>
+          </div>
+          <input
+            type="range"
+            id="volume"
+            name="volume"
+            class="player__slider"
+            min="0"
+            max="1"
+            step="0.05"
+            value="1"
+          />
+        </div>
+
+        <div class="speed_holder">
+          <div class="speed">
+            <div><i id="green" class="fas fa-fire"></i></div>
+            <div><i id="blue" class="fas fa-fire"></i></div>
+            <div><i id="orange" class="fas fa-fire"></i></div>
+            <div><i id="red" class="fas fa-fire"></i></div>
+          </div>
+          <input
+            type="range"
+            name="playbackRate"
+            class="player__slider"
+            min="0.5"
+            max="2"
+            step="0.5"
+            value="1"
+          />
+        </div>
+        <div class="fullScreen toggleF" title="FullScreen">
+          <i class="fas fa-expand-alt"></i>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
