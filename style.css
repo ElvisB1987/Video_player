@@ -73,6 +73,19 @@ body {
   color: white;
   padding: 10px;
 }
+
+.timePlay_holder{
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 15px;
+}
+
+.time{
+    color:#00fd0a ;
+    display: flex;
+    align-items: center;
+}
+
 .fullScreen {
   width: 10%;
   border: none;
@@ -88,7 +101,7 @@ body {
 }
 
 .fas {
-  color: white;
+  color:#00fd0a;
 }
 
 .speed_holder {
@@ -153,19 +166,19 @@ input[name="playbackRate"]::-webkit-slider-thumb:after {
 
 input[name="volume"] {
   margin-left: 10px;
-  height: 8px;
+  height: 25px;
   -webkit-appearance: none;
   background: #111;
   outline: none;
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
 }
 input[name="volume"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 8px;
-  height: 8px;
-  background: #00fd0a;
+  width: 5px;
+  height: 25px;
+  background: yellow;
   cursor: pointer;
   box-shadow: -407px 0 0 400px #00fd0a;
 }
@@ -180,7 +193,44 @@ input[name="volume"]::-webkit-slider-thumb {
 }
 
 @media only screen and (max-width: 500px) {
+  
+  body{
+    font-size: 13px;
+  }
+  
   .player {
     max-width: 95vw;
+  }
+
+  input[name="volume"]{
+    width: 70%;
+  }
+
+  input[name="playbackRate"]{
+    width: 100%;
+  }
+
+  .speed_holder{
+    width: 25%;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .volume_holder{
+    width: 35%;
+  }
+
+  .speed{
+    width: 100%;
+  }
+
+  .timePlay_holder{
+    width: 15%;
+    column-gap: 0;
+  }
+
+  .player__button{
+    display: none;
   }
 }

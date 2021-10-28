@@ -6,6 +6,7 @@ var toggle = player.querySelector(".toggle");
 var ranges = player.querySelectorAll(".player__slider");
 var fullScreen = player.querySelector(".toggleF");
 var volumeHigh = player.querySelector("#volume");
+var timeProgress = player.querySelector(".time");
 
 // play and pause action
 function togglePlay() {
@@ -41,6 +42,17 @@ function handleRangeUpdate() {
 function handleprogress() {
   const percent = (video.currentTime / video.duration) * 100;
   progressBar.style.width = `${percent}%`;
+
+  let mins = Math.floor(video.currentTime / 60);
+  if (mins < 10) {
+    mins = "0" + String(mins);
+  }
+
+  let secs = Math.floor(video.currentTime % 60);
+  if (secs < 10) {
+    secs = "0" + String(secs);
+  }
+  timeProgress.innerHTML = `${mins}:${secs}`;
   console.log(percent);
 }
 
