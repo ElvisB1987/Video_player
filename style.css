@@ -233,4 +233,7 @@ input[name="volume"]::-webkit-slider-thumb {
   .player__button{
     display: none;
   }
+  .time{
+    margin-left: 10px;
+  }
 }
